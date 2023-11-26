@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+	
+	<!-- <hibernate-configuration>
+		<session-factory>
+			<property name="connection.driver_class">com.mysql.jdbc.Driver</property>   it means ham  kis Database ka kon sa Driver use kr rahe hai
+			
+			<property name="connection.url">jdbc:mysql://localhost:3306/myhiber</property>   myhiber is databse name jo hm jdbc m kudh bnate the workbench pr
+			
+			<property name="connection.username">root</property>
+			
+			<property name="connection.password">hibernate</property>
+			
+			<property name="dialect">org.hibernate.dialect.MySQLDialect</property> it is a class which define the bhasa(lan) of diff databases ye Mysql ki hai
+			
+			<property name="hbm2ddl.auto">update</property>  ye automatic Table create krega agr hai to Update krega and ni hai to create krega
+			
+			<property name="show_sql">true</property> ye quary auto create krega hai es property se use hme show krega kon si quary likhi hai
+		</session-factory>
+	</hibernate-configuration> -->
+	
+	
+	
+	
+	
+	<hibernate-configuration>
+		<session-factory>
+			<property name="connection.driver_class">com.mysql.jdbc.Driver</property>   
+			<property name="connection.url">jdbc:mysql://localhost:3306/myhiber</property>   
+			<property name="connection.username">root</property>
+			<property name="connection.password">hibernate</property>
+			<property name="dialect">org.hibernate.dialect.MySQL5Dialect</property> 
+			<property name="hbm2ddl.auto">create</property>  
+			<property name="show_sql">true</property> 
+			<property name="format_sql">true</property> <!-- ye O/P time pr console mai proper SQL query likhega -->
+			
+			<mapping class="com.entities.Todo_NotesTaker"/>
+			 
+			
+			
+			
+		</session-factory>
+	</hibernate-configuration>
